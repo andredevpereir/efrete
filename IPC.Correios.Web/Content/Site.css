@@ -1,0 +1,217 @@
+﻿:root {
+    --azul: #272F59;
+    --vermelho: #D90B1C;
+    --offwhite: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--offwhite);
+}
+
+/* TOP HEADER */
+header {
+    background-color: var(--azul);
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+    header section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+        header section img {
+            width: 150px;
+        }
+
+        header section h1 {
+            color: white;
+            border-left: 1px solid white;
+            padding: 1em;
+            margin-left: 1em;
+            font-size: 1.2em;
+        }
+
+    header div {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        header div nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1em;
+        }
+
+            header div nav a {
+                color: var(--offwhite);
+                text-transform: uppercase;
+                font-size: .8em;
+                font-weight: bold;
+                opacity: .8;
+            }
+
+                header div nav a:hover {
+                    transition: .2s;
+                    opacity: 1;
+                }
+
+@media only screen and (max-width: 600px) {
+    header div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+        header div nav {
+            display: none;
+        }
+}
+
+/* BREADCRUMBS */
+nav.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%
+}
+
+    nav.breadcrumb div {
+        width: 70%;
+        margin: auto;
+        padding: 1em 0;
+    }
+
+        nav.breadcrumb div a {
+            font-size: 1em;
+            color: var(--azul);
+            background-color: white;
+            padding: .5em;
+        }
+
+            nav.breadcrumb div a:hover {
+                transition: .2s;
+                text-decoration: underline;
+            }
+
+@media only screen and (max-width: 600px) {
+    nav.breadcrumb div {
+        width: 90%;
+    }
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    flex-direction: column;
+    padding: 1em;
+}
+
+    main section {
+        margin: auto;
+        width: 100%;
+    }
+
+        main section h2 {
+            font-size: 2em;
+        }
+
+        main section hr {
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+            margin: 1em 0;
+        }
+
+        main section p {
+            color: #666;
+        }
+
+        main section input, main section select {
+            background-color: transparent;
+            border: 5px solid var(--azul);
+            padding: 1em;
+            outline: none;
+        }
+
+        main section .input {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+            main section .input label {
+                background-color: #272F59;
+                color: white;
+                padding: .5em;
+                width: 30%;
+            }
+
+            main section .input input {
+                margin-bottom: 1em;
+            }
+
+        main section button {
+            border: 5px solid var(--vermelho);
+            background-color: transparent;
+            color: var(--vermelho);
+            padding: 1em;
+            cursor: pointer;
+            margin-top: 1em;
+            font-weight: bold;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+
+            main section button:hover {
+                transition: .2s;
+                background-color: var(--vermelho);
+                color: white;
+            }
+
+@media only screen and (max-width: 600px) {
+    main {
+        width: 90%;
+    }
+
+        main section button {
+            width: 100%;
+        }
+
+        main section .input {
+            width: 100%;
+        }
+
+            main section .input label {
+                width: 100%;
+            }
+}
+
+footer {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 1em;
+}

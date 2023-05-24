@@ -1,0 +1,41 @@
+﻿@section breadcrumbs{
+
+    <nav class="breadcrumb">
+        <div>
+            <a href="#">Início</a>
+        </div>
+    </nav>
+
+}
+
+<section>
+
+    <h2>Bem vindo ao Buscador de CEP!</h2>
+
+    <hr>
+    <p> O aplicativo buscador de CEP permite que você encontre códigos de endereçamento postais (CEP). </p>
+    <p> Se você já tiver o CEP em mãos e gostaria de buscar o seu endereço, o Buscador CEP também vai te ajudar. </p>
+
+    <div class="botoes">
+        <a href="@Url.Action("BuscaEndereco", "Home")"><button>Buscar Endereço</button></a>
+        <a href="@Url.Action("BuscaCEP", "Home")"><button>Buscar CEP</button></a>
+    </div>
+</section>
+
+@section scripts{
+
+    <script>
+        $.ajax({
+            url: '@Url.Action("Teste", "Home")',
+            method: "POST",
+            data: {},
+            success: function (data) {
+                console.log(data)
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    </script>
+
+}

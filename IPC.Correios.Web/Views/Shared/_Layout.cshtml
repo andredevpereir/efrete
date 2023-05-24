@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP</title>
+
+    @Styles.Render("~/Content/Site.css")
+
+    @RenderSection("styles", required: false)
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+
+    <header>
+        <div>
+            <section>
+                <img src="@Url.Content("~/Content/Images/logo.png")" alt="">
+                <h1>Buscador de CEP</h1>
+            </section>
+
+            <nav>
+                <a href="@Url.Action("Index", "Home")">Início</a>
+                <a href="@Url.Action("BuscaEndereco", "Home")">Buscar Endereço</a>
+                <a href="@Url.Action("BuscaCEP", "Home")">Buscar CEP</a>
+            </nav>
+        </div>
+    </header>
+
+    @RenderSection("breadcrumbs", required: true)
+
+    <main>
+
+        @RenderBody()
+
+    </main>
+
+    <footer>
+        2023 - Buscador CEP
+    </footer>
+
+</body>
+</html>
